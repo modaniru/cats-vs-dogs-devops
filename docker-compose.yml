@@ -30,7 +30,7 @@ services:
       - ./certbot/www:/var/www/certbot/:ro
       - ./certbot/conf/:/etc/nginx/ssl/:ro
     depends_on:
-      - cat-vs-dogs
+      - cats-vs-dogs
   certbot:
     networks:
       - mynetwork
