@@ -32,7 +32,9 @@ services:
     depends_on:
       - cats-vs-dogs
   certbot:
-    image: certbot/certbot
+    depends_on: 
+      - frontend
+    image: certbot/certbot:latest
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
